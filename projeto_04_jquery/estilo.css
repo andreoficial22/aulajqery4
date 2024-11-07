@@ -1,0 +1,63 @@
+#logomarca{
+    height: 300px;
+    margin-top: -50px;
+    margin-bottom: -80px;
+}
+body{
+    text-align: center;
+    font-family: Arial;
+    margin: 0px;
+}
+h1 {
+    font-size: 50px;
+}
+#painelRastreio{
+    background-image: linear-gradient(to right, #FFA07A, #FFC107);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#codigo_procurado{
+    width: 500px;
+    height: 50px;
+    border-radius: 30px 0px 0px 30px;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+}
+#btnPesquisar{
+    border-radius: 0px 30px 30px 0px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+
+}
+#resultado{
+    min-height: 400px;
+    font-size: 30px;
+    margin-top: 40px;
+}
+.atualizacao{
+    width: 500px;
+    height: 200px;
+    background-color: lightgray;
+    border-left: 5px solid rebeccapurple;
+    margin: auto;
+    margin-bottom: 40px; 
+    text-align: left;
+    padding: 20px;
+}
+.tipo{
+    font-size: 30px;
+    font-weight: 900;
+}
+.data{
+    font-style: italic; 
+    font-size: 20px;
+}
+.locais{
+    font-size: 30px;
+
+}
+

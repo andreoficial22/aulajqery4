@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <img src="logomarca.jpg" id="logomarca"> <br>
+    <h1>Rastreio de Encomendas</h1>
+    <div id="painelRastreio">
+            <input type="text" 
+                   id="codigo_procurado"
+                   placeholder="Digite o código da encomenda">
+            <button id="btnPesquisar">Pesquisar</button>
+    </div>
+
+    <div id="resultado"></div>
+    <script>
+        $("#btnPesquisar").click(function(){
+            var codigo_capturado = $("#codigo_procurado").val();
+            $("#resultado").html("<img src='carregando.gif' height='70'> <br> Pesquisando ...");
+            $.ajax({
+                url: "consultar.php",
+                method: "POST",
+                data: {cod: codigo_capturado},
+                success: function(resposta){
+                    $("#resultado").html(resposta);
+                },
+                error: function(){
+                    alert("Erro ao consultar");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
